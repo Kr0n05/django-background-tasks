@@ -10,8 +10,8 @@ from django.utils import autoreload
 
 from background_task.tasks import tasks, autodiscover
 from background_task.utils import SignalManager
-from compat import close_connection
-
+#from compat import close_connection
+from django.db import close_old_connection
 
 logger = logging.getLogger(__name__)
 
